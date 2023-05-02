@@ -1,6 +1,6 @@
 ---
 title: "Covid91 vaccine study FinalFall2022"
-author: "Put your name here!"
+author: "Roxan Barakat"
 output: 
   html_document:
     number_sections: true

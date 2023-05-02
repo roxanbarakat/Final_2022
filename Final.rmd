@@ -18,13 +18,38 @@ FinalDat <-read.csv(file="finalFall2022.csv",header=TRUE)
 FinalData <- FinalDat  %>% select(-one_of("X"))
 FinalData <- FinalData %>%
 mutate(across(where(is.character), as.factor))
+FinalData$treatment <- relevel(FinalData$treatment,ref="placebo")
+#FinalData$infected <- relevel(FinalData$infected,ref="OK")
+male = filter(FinalData, sex =="M")
+Female = filter(FinalData, sex =="F")
+gay = filter(FinalData, LGBTQ =="gay")
+Druguser = filter(FinalData, DrugUser =="yes")
 ```
+
 
 # Introduction
 
-A new  preventative vaccine (covid921) is under test in clinical trials. Given the nature of this vaccine it is suspected that the drug may exhibit different effectiveness across the variety of subpopulations tracked. Consider population subgroups by gender( guys and gals), drug use, and sexual orientation. Write a complete report that separately considers this drug for each subgroup and your recommendations as to whether people in the subgroup should take the vaccine. Structure your report in four sections each devoted to one of the four subgroups, use null and alternative hypothesis statements and correct statistical verbage when referencing p-values in conclusions.
+A new  preventative vaccine (covid921) is under test in clinical trials. Given the nature of this vaccine it is suspected that the drug may exhibit different effectiveness across the variety of sub populations tracked. Consider population subgroups by gender( guys and gals), drug use, and sexual orientation. Write a complete report that separately considers this drug for each subgroup and your recommendations as to whether people in the subgroup should take the vaccine. Structure your report in four sections each devoted to one of the four subgroups, use null and alternative hypothesis statements and correct statistical verbage when referencing p-values in conclusions.
+
+
+
+# Coding details 
+
+First, the variables from FinalData needed to be changed from character variables into factor variables. The appropriate dplyr code was used to do this. The following code was used to achieve this: 
+
+FinalData <- FinalData %>%
+mutate(across(where(is.character), as.factor))
+
+Next, specific subgroups had to be separated from the broader categories in order to properly studied. Male and Female were separated into subgroups, as well as sexual orientation and drug use. All of these categories are isolated to see whether or not these particular populations should or should not take the  new covid291 vaccine.
+
+
+In order to create the effectiveness interval for all four categories, each group of people in this study had to be stored in separate variables. 
+
 
 ## Males
+
+### Barplot
+
 
 
 ## Females

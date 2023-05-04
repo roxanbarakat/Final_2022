@@ -46,9 +46,9 @@ Next, specific subgroups had to be separated from the broader categories in orde
 In order to create the effectiveness interval for all four categories, each group of people in this study had to be stored in separate variables. 
 
 
-## Males
+# Males
 
-### Barplot
+## Barplot
 ```{r}
 dd2 <- male %>% group_by(infected,treatment) %>% summarize(count=n()) %>% mutate(prcnt=count/sum(count))
 
@@ -64,15 +64,55 @@ basicCC <- ggplot(dd2,aes(x=infected,y=prcnt*100,fill=treatment))
 basicCC + geom_bar(stat="identity", position = "dodge")
 ```
 
+This plot represents the population of males and the relationship to the contraction of covid921 by either whether they were given the actual vaccine or the placebo in its place. 
 
-## Females
+There are two plots from this chunk of coding. In first plot,the x-axis represents infected,in terms of whether the not participants were infected with covid921. The y-axis represents the count, or number of people that got covid921 or not. In the second plot, the one above, the left two bars of the graph are all the people that got covid921. The x-axis represents whether a person got covid921 or not. The y-axis, however, instead of representing the number of people who got covid921, now represents the percentage of people that got covid921 after taking the the placebo or taking the Vaccine. 
+
+The plot above shows us that there was about 68% of the male population who were given the placebo and had in fact contracted covid921, while around 49% of males who were also given the placebo were okay. From the data above, we can see that there was about 32% of males who were given the vaccine and still contracted covid921, while around 51% of the male population was given the vaccine and did not contract covid921. Overall, there was a substantially higher percentage of people who took the placebo contracted covid921 versus those who were given the vaccine. The vaccine appears to be effective in protection against covid921. The odds of getting covid921 while taking the vaccine are 1:2. The men that took the placebo were two times more likely to get covid921 than those taking the vaccine.
+
+The codes that create this plot start with the code block beginning with dd2. The code dd2 can be seen in the environment pane and if inspected contains 4 variables. These variables include infected, treatment, count, and prcnt (which stands for percent). The second group of codes is called the basicC. BasicC can also be seen in the environment pane and appears to contain a list of 9 variables. This information creates the first plot. The basicCC is the last bunch of codes and is also in the files pane. It also contains 9 variables and helps to create the percentage plot, the second plot. For both basicC and basicCC these variables include data, layers, scales, mapping, theme, coordinates, facet, plot_env, labels. 
 
 
-## LGBTQ
 
 
+## Numerical results
 
-## Druggies
+##  Inferential 
+
+## Effectiveness Confidence Interval
+
+
+# Females
+
+## Barplot
+
+## Numerical results
+
+##  Inferential 
+
+## Effectiveness Confidence Interval 
+
+
+# LGBTQ
+
+## Barplot
+
+## Numerical results
+
+##  Inferential 
+
+## Effectiveness Confidence Interval 
+
+
+# Druggies
+
+## Barplot
+
+## Numerical results
+
+##  Inferential 
+
+## Effectiveness Confidence Interval
 
 
 # Overall Results and Conclusions

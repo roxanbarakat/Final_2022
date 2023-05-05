@@ -82,8 +82,30 @@ colPerc(table1)
 
 These numerical results show specific percentages of males that got covid921 after being given the placebo and the vaccine. Among the males, 32% got covid921 after taking the vaccine, while the approximately 68% of males that were given the placebo contracted covid921. The vaccine is clearly effective in preventing covid921 in males and it is recommended. Those who took the placebo were much more likely to contact covid921. The odds of getting covid921 while taking the vaccine are 1:2. The men that were given the placebo were two times more likely to get covid921 than those who were given the vaccine.
 
-
 ##  Inferential 
+```{r}
+chisq.test(table1)
+chisqtestGC(table1)
+malefish <- fisher.test(table1)
+malefish
+```
+```{r}
+effect <- malefish$p.value/(malefish$p.value +1)
+effectivenessmales = malefish$estimate/(malefish$estimate +1)*100
+print(effectivenessmales)
+```
+```{r}
+low=(malefish$conf.int[1]/(malefish$conf.int[1] +1))*100
+hi=(malefish$conf.int[2]/(malefish$conf.int[2] +1))*100
+options(digits=2)
+```
+
+From the data above the information we are focusing on the most are the results we gathered from the Fisher's Exact test. The p-value displayed above is extremely small with the value of 0.000000000002. This is an awfully small number and seeing this number means that it is very unlikely that these results will occur by chance.
+
+The null hypothesis predicted that the deaths related to covid921 are independent of sex. Since it is clear that sex does play a role in the death rate of individuals, the alternative hypothesis, that there is a correlation between covid921 deaths and sex, is the favorable option.
+
+The odd ratio above illustrates a ratio of 2.2. This means that the males who received the placebo were two times more likely to get covid921 than those who were given the vaccine. 
+
 
 ## Effectiveness Confidence Interval
 

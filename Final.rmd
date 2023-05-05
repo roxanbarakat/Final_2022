@@ -315,7 +315,10 @@ The null hypothesis is rejected in favor of the alternative. The vaccine is comp
 The odd ratio above illustrates a ratio of 0.21. This means that the drug users who received the vaccine were five times more likely to get covid921 than those who were given a placebo.
 
 
-## Effectiveness Confidence Interval
+## Effectiveness Confidence Interval `r low`  to `r hi`
 
+Above is the effectiveness for the covid921 vaccine for the drug user population. If the effectiveness is above 50% that means that the vaccine is effective. Based on the interval seen above, we can conclude that the vaccine is ineffective in protecting the drug user population from contracting covid921. 
+
+The odds ratio is approximately how effective the vaccine is. The odds ratio for the drug user population can be seen above as 17. The effectiveness confidence interval for the drug user population is between 8.57 to 29.47.
 
 # Overall Results and Conclusions

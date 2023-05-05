@@ -214,8 +214,17 @@ In this plot it shows that there was about 13% of the LGBTQ population who were 
 The codes that create this plot start with the code block beginning with dd2. The code dd2 can be seen in the environment pane and if inspected contains 4 variables. These variables include infected, treatment, count, and percent (which stands for percent). The second group of codes is called the basicC. BasicC can also be seen in the environment pane and appears to contain a list of 9 variables. This information creates the first plot. The basicCC is the last bunch of codes and is also in the files pane. It also contains 9 variables and helps to create the percentage plot, the second plot. For both basicC and basicCC these variables include data, layers, scales, mapping, theme, coordinates, facet, plot_env, labels.
 
 ## Numerical results
+```{r}
+table1 <- xtabs(~infected + treatment, data=gay)
+rowPerc(table1)
+colPerc(table1)
+```
+These numerical results show specific percentages of LGBTQ members that got covid921 after being given the placebo and the vaccine. Among these participants, 87% got covid921 after taking the vaccine, while approximately 13% of LGBTQ members that were given the placebo contracted covid921. The vaccine is clearly ineffective in preventing covid921 in LGBTQ members and it is not recommended. Those who took the vaccine were much more likely to contract covid921. The odds of getting covid921 while taking the vaccine are 1:6. The LGBTQ members that were given the vaccine were six times more likely to get covid921 than those who were given the placebo.
+
 
 ##  Inferential 
+
+
 
 ## Effectiveness Confidence Interval 
 

@@ -80,7 +80,7 @@ rowPerc(table1)
 colPerc(table1)
 ```
 
-These numerical results show specific percentages of males that got covid921 after being given the placebo and the vaccine. Among the males, 32% got covid921 after taking the vaccine, while the approximately 68% of males that were given the placebo contracted covid921. The vaccine is clearly effective in preventing covid921 in males and it is recommended. Those who took the placebo were much more likely to contact covid921. The odds of getting covid921 while taking the vaccine are 1:2. The men that were given the placebo were two times more likely to get covid921 than those who were given the vaccine.
+These numerical results show specific percentages of males that got covid921 after being given the placebo and the vaccine. Among the males, 32% got covid921 after taking the vaccine, while the approximately 68% of males that were given the placebo contracted covid921. The vaccine is clearly effective in preventing covid921 in males and it is recommended. Those who took the placebo were much more likely to contract covid921. The odds of getting covid921 while taking the vaccine are 1:2. The men that were given the placebo were two times more likely to get covid921 than those who were given the vaccine.
 
 ##  Inferential 
 ```{r}
@@ -141,6 +141,14 @@ In this plot it contrasts the previous and shows that there was about 42% of the
 The codes that create this plot start with the code block beginning with dd2. The code dd2 can be seen in the environment pane and if inspected contains 4 variables. These variables include infected, treatment, count, and prcnt (which stands for percent). The second group of codes is called the basicC. BasicC can also be seen in the environment pane and appears to contain a list of 9 variables. This information creates the first plot. The basicCC is the last bunch of codes and is also in the files pane. It also contains 9 variables and helps to create the percentage plot, the second plot. For both basicC and basicCC these variables include data, layers, scales, mapping, theme, coordinates, facet, plot_env, labels.
 
 ## Numerical results
+```{r}
+table1 <- xtabs(~infected + treatment, data=female)
+rowPerc(table1)
+colPerc(table1)
+```
+
+These numerical results show specific percentages of females that got covid921 after being given the placebo and the vaccine. Among the females, 57% got covid921 after taking the vaccine, while the approximately 43% of females that were given the placebo contracted covid921. The vaccine is clearly ineffective in preventing covid921 in females. Those who took the vaccine were much more likely to contract covid921. The odds of getting covid921 while taking the vaccine are 3:2. The females that were given the vaccine were one and half times more likely to get covid921 than those who were given the placebo.
+
 
 ##  Inferential 
 

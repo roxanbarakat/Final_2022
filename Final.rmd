@@ -322,3 +322,17 @@ Above is the effectiveness for the covid921 vaccine for the drug user population
 The odds ratio is approximately how effective the vaccine is. The odds ratio for the drug user population can be seen above as 17. The effectiveness confidence interval for the drug user population is between 8.57 to 29.47.
 
 # Overall Results and Conclusions
+The covid921 vaccine was effective in protecting men against the contraction of the disease. The covid921 effectiveness was `r effectivenessmales`for men.
+
+The covid921 vaccine was not successful in protecting women against covid-19.The covid-19 effectiveness was `r effectivenessfemale`
+
+The covid921 vaccine was not effective in treating people who identified as part of the LGBTQ community. The individuals who identified as LGBTQ and took the vaccine were six times as likely to get covid921 than those taking the placebo.The covid921 effectiveness was `r effectivenessgays` for gay individuals.
+
+The individuals that were drugusers were not effectively protected by the vaccine. 
+The drugusers that took the vaccine were 5 times as likely to get covid921 than those taking the placebo.The covid921 effectiveness was `r effectivenessdrug` for drugusers.
+
+If you are a female or identify as an LGBTQ member or a drug user, it is not recommended to receive the vaccine. However, if you are a male the vaccine was reported to have been effective.
+
+The null that there is no difference in taking the vaccine can be accepted to the categories including females, LGBTQ, and drug users individuals. The alternative, that the vaccine works and is effective, can be accepted for males. 
+
+To summarize, the vaccine should not be administered to females, LGBTQ, or drug users as they did not pass the 50% effectiveness cutoff and had rather low confidence intervals. The only safe group to administer the vaccine on would be males as they had the highest effectiveness value and confidence interval.

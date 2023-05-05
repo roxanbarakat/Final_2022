@@ -152,6 +152,34 @@ These numerical results show specific percentages of females that got covid921 a
 
 ##  Inferential 
 
+```{r}
+chisq.test(table1)
+chisqtestGC(table1)
+femalefish <- fisher.test(table1)
+femalefish
+```
+
+
+```{r}
+effect <- femalefish$p.value/(femalefish$p.value +1)
+effectivenessfemale = femalefish$estimate/(femalefish$estimate +1)*100
+print(effectivenessfemale)
+```
+
+```{r}
+low=(femalefish$conf.int[1]/(femalefish$conf.int[1] +1))*100
+hi=(femalefish$conf.int[2]/(femalefish$conf.int[2] +1))*100
+options(digits=2)
+```
+
+From the data above the information we are focusing on the most are the results we gathered from the Fisher's Exact test. The p-value displayed above is small with the value of 0.005. This is small number  means that it is very unlikely that these results will occur by chance.
+
+The null hypothesis predicted that the deaths related to covid921 are independent of sex. Since it is clear that sex does play a role in the death rate of individuals, the alternative hypothesis, that there is a correlation between covid921 deaths and sex, is the favorable option.
+
+The odd ratio above illustrates a ratio of 0.74. This means that the females who received the placebo were one and half times more likely to get covid921 than those who were given the vaccine. 
+
+
+
 ## Effectiveness Confidence Interval 
 
 
